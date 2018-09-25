@@ -1,8 +1,7 @@
 window.onload = function () {
-    var pessoas = pessoaControllers.get();
     var tablePessoas = document.getElementById('tablePessoas');
-
-    pessoas.forEach(addRow);
+    var pessoasController = controller('pessoas', Pessoa);
+    pessoasController.get().forEach(addRow);
 
     function addRow(item) {
         var row = '<tr>';
