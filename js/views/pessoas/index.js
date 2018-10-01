@@ -7,7 +7,7 @@ window.onload = function () {
         row += '<td>' + item.nome + '</td>';
         row += '<td>' + item.sobreNome + '</td>';
         row += '<td>';
-        row += '<a>Editar</a>';
+        row += '<a href="Editar?id=' + item.id + '">Editar</a>';
         row += ' | ';
         row += '<a>Deletar</a>';
         row += '</td>';
