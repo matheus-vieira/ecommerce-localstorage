@@ -11,7 +11,7 @@ window.onload = function () {
         row += ' | ';
         row += '<a>Deletar</a>';
         row += '</td>';
-        row += '</tr>';Produto
+        row += '</tr>';
         tablePessoas.innerHTML += row;
     }
 }
