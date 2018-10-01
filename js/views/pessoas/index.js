@@ -1,6 +1,6 @@
 window.onload = function () {
     var tablePessoas = document.getElementById('tablePessoas');
-    pessoasController.get().forEach(addRow);
+    pessoasController.getAll().forEach(addRow);
 
     function addRow(item) {
         var row = '<tr>';
