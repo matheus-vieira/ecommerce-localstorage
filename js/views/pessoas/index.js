@@ -12,7 +12,7 @@ window.onload = function () {
         row += ' | ';
         row += '<a>Deletar</a>';
         row += '</td>';
-        row += '</tr>';
+        row += '</tr>';Produto
         tablePessoas.innerHTML += row;
     }
 }

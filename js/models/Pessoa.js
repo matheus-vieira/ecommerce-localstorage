@@ -8,3 +8,5 @@ var Pessoa = (function () {
         this.dataNascimento = o.dataNascimento;
     }    
 })();
+
+var pessoasController = controller('pessoas', Pessoa);
