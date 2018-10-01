@@ -1,6 +1,5 @@
 window.onload = function () {
     var tablePessoas = document.getElementById('tablePessoas');
-    var pessoasController = controller('pessoas', Pessoa);
     pessoasController.get().forEach(addRow);
 
     function addRow(item) {
