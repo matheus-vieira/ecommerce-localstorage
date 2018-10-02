@@ -9,7 +9,7 @@ window.onload = function () {
         row += '<td>';
         row += '<a href="Editar?id=' + item.id + '">Editar</a>';
         row += ' | ';
-        row += '<a>Deletar</a>';
+        row += '<a href="Deletar?id=' + item.id + '">Deletar</a>';
         row += '</td>';
         row += '</tr>';
         tablePessoas.innerHTML += row;
