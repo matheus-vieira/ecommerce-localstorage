@@ -1,5 +1,5 @@
 function Pessoa(o) {
-    this.id = guid();
+    this.id = o.id || guid();
     o = o || {};
     this.nome = o.nome;
     this.sobreNome = o.sobreNome;

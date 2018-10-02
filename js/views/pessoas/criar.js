@@ -8,7 +8,7 @@ window.onload = function () {
             var pessoa = new Pessoa({
                 nome: txtNome.value,
                 sobreNome: txtSobreNome.value,
-                dataNascimento: txtDataNascimento.valueAsDate
+                dataNascimento: txtDataNascimento.valueAsNumber
             });
             pessoasController.add(pessoa);
         });

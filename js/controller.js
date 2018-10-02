@@ -3,6 +3,8 @@ function controller(key, obj) {
     if (lista) lista = JSON.parse(lista);
     lista = lista || [];
 
+    lista = lista.map(i => new obj(i));
+
     function updateStorage() {
         var str = JSON.stringify(lista);
         localStorage.setItem(key, str);
