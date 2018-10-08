@@ -13,7 +13,7 @@ window.onload = function () {
     var txtPreco = document.getElementById('txtPreco');
     
     txtNome.value = produto.nome;
-    txtDescricao.value = produto.Descricao;
+    txtDescricao.value = produto.descricao;
     txtPreco.value = produto.preco;
 
     document.getElementById('btnSalvar')
