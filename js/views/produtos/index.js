@@ -5,7 +5,7 @@ window.onload = function () {
     function addRow(item) {
         var row = '<tr>';
         row += '<td>' + item.nome + '</td>';
-        row += '<td> R$ ' + item.categoria + '</td>';
+        row += '<td>' + item.categoria + '</td>';
         row += '<td> R$ ' + item.preco + '</td>';
         row += '<td>';
         row += '<a href="Editar?id=' + item.id + '">Editar</a>';
