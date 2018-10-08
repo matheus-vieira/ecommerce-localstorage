@@ -11,10 +11,12 @@ window.onload = function () {
     var txtNome = document.getElementById('txtNome');
     var txtDescricao = document.getElementById('txtDescricao');
     var txtPreco = document.getElementById('txtPreco');
+    var txtCategoria = document.getElementById('txtCategoria');
     
     txtNome.value = produto.nome;
     txtDescricao.value = produto.descricao;
     txtPreco.value = produto.preco;
+    txtCategoria.value = produto.categoria;
 
     document.getElementById('btnSalvar')
         .addEventListener('click', function (ev) {
