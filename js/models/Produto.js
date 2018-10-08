@@ -1,12 +1,9 @@
-var Produto = (function () {
-    var id = 1
-    return function Produto(o) {
-        this.id = id++;
-        o = o || {};
-        this.nome = o.nome;
-        this.sobreNome = o.sobreNome;
-        this.dataNascimento = o.dataNascimento;
-    }    
-})();
+function Produto(o) {
+    this.id = o.id || guid();
+    o = o || {};
+    this.nome = o.nome;
+    this.descricao = o.descricao;
+    this.preco = o.preco;
+}
 
 var produtosController = controller('produtos', Produto);
