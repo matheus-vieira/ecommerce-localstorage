@@ -20,12 +20,25 @@ window.onload = function () {
     txtCategoria.value = produto.categoria;
 
     document.getElementById('btnSalvar')
-        .addEventListener('click', function (ev) {
-            produto.nome = txtNome.value;
-            produto.descricao = txtDescricao.value;
-            produto.preco = txtPreco.valueAsNumber;
-            produto.categoria = txtCategoria.value;
-            produtosController.update(produto);
-            window.location = '../';
-        });
+        .addEventListener('click',
+            ev => validacao() && salvar());
+
+    function salvar() {
+        produto.nome = txtNome.value;
+        produto.descricao = txtDescricao.value;
+        produto.preco = txtPreco.valueAsNumber;
+        produto.categoria = txtCategoria.value;
+        produtosController.update(produto);
+        window.location = '../';
+    }
+
+    function validacao() {
+        if (!txtNome.value)
+            return false;
+        if (isNaN(txtPreco.valueAsNumber) ||
+            txtPreco.valueAsNumber < 0)
+        return false;
+
+        return true;
+    }
 }

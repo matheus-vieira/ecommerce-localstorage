@@ -22,7 +22,7 @@
         <form>
             <div class="form-group">
                 <label for="txtNome">Nome</label>
-                <input type="text" class="form-control" id="txtNome" aria-describedby="nomeHelp" placeholder="Nome">
+                <input type="text" class="form-control" id="txtNome" aria-describedby="nomeHelp" placeholder="Nome" required="required" />
                 <small id="nomeHelp" class="form-text text-muted">Digite o nome do produto.</small>
             </div>
             <div class="form-group">
@@ -37,7 +37,7 @@
             </div>
             <div class="form-group">
                 <label for="txtPreco">Preço</label>
-                <input type="number" class="form-control" id="txtPreco" step="0.01" aria-describedby="precoHelp"  />
+                <input type="number" class="form-control" id="txtPreco" step="0.01" aria-describedby="precoHelp" required="required" />
                 <small id="precoHelp" class="form-text text-muted">Informe o preço do produto.</small>
             </div>
             <button id="btnSalvar" type="submit" class="btn btn-primary">Salvar</button>
