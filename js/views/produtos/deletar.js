@@ -8,19 +8,13 @@ window.onload = function () {
     if (!produto)
         return window.location = '../';
 
-    var txtNome = document.getElementById('txtNome');
-    var txtDescricao = document.getElementById('txtDescricao');
-    var txtPreco = document.getElementById('txtPreco');
-    var txtCategoria = document.getElementById('txtCategoria');
-    
-    txtNome.value = produto.nome;
-    txtDescricao.value = produto.descricao;
-    txtPreco.value = produto.preco;
-    txtCategoria.value = produto.categoria;
+    $('#txtNome').val(produto.nome);
+    $('#txtDescricao').val(produto.descricao);
+    $('#txtPreco').val(produto.preco);
+    $('#txtCategoria').val(produto.categoria);
 
-    document.getElementById('btnSalvar')
-        .addEventListener('click', function (ev) {
-            produtosController.remove(produto);
-            window.location = '../';
-        });
+    $('#btnSalvar').on('click', function (ev) {
+        produtosController.remove(produto);
+        window.location = '../';
+    });
 }

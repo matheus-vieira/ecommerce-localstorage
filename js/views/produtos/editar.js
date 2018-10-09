@@ -19,7 +19,7 @@ window.onload = function () {
     $txtPreco.val(produto.preco);
     $txtCategoria.val(produto.categoria);
 
-    $('#btnSalvar').on('click', ev => validacao() && salvar());
+    $('#btnSalvar').on('click', () => validacao() && salvar());
 
     function salvar() {
         produto.nome = $txtNome.val();
