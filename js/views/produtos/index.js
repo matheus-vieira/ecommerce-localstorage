@@ -1,6 +1,8 @@
 window.onload = function () {
-    var tableProdutos = document.getElementById('tableProdutos');
-    produtosController.getAll().forEach(addRow);
+    var table = $('table tbody');
+
+    produtosController.getAll()
+        .forEach(addRow);
 
     function addRow(item) {
         var row = '<tr>';
@@ -13,6 +15,6 @@ window.onload = function () {
         row += '<a href="Deletar?id=' + item.id + '">Deletar</a>';
         row += '</td>';
         row += '</tr>';
-        tableProdutos.innerHTML += row;
+        $table.append(row);
     }
 }

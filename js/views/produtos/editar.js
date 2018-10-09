@@ -9,35 +9,34 @@ window.onload = function () {
     if (!produto)
         return window.location = '../';
 
-    var txtNome = document.getElementById('txtNome');
-    var txtDescricao = document.getElementById('txtDescricao');
-    var txtPreco = document.getElementById('txtPreco');
-    var txtCategoria = document.getElementById('txtCategoria');
+    var $txtNome = $('#txtNome');
+    var $txtDescricao = $('#txtDescricao');
+    var $txtPreco = $('#txtPreco');
+    var $txtCategoria = $('#txtCategoria');
     
-    txtNome.value = produto.nome;
-    txtDescricao.value = produto.descricao;
-    txtPreco.value = produto.preco;
-    txtCategoria.value = produto.categoria;
+    $txtNome.val(produto.nome);
+    $txtDescricao.val(produto.descricao);
+    $txtPreco.val(produto.preco);
+    $txtCategoria.val(produto.categoria);
 
-    document.getElementById('btnSalvar')
-        .addEventListener('click',
-            ev => validacao() && salvar());
+    $('#btnSalvar').on('click', ev => validacao() && salvar());
 
     function salvar() {
-        produto.nome = txtNome.value;
-        produto.descricao = txtDescricao.value;
-        produto.preco = txtPreco.valueAsNumber;
-        produto.categoria = txtCategoria.value;
+        produto.nome = $txtNome.val();
+        produto.descricao = $txtDescricao.val();
+        produto.preco = Number.parseFloat($txtPreco.val());
+        produto.categoria = $txtCategoria.val();
         produtosController.update(produto);
         window.location = '../';
     }
 
     function validacao() {
-        if (!txtNome.value)
+        if (!$txtNome.val())
             return false;
-        if (isNaN(txtPreco.valueAsNumber) ||
-            txtPreco.valueAsNumber < 0)
-        return false;
+        
+        var p = Number.parseFloat($txtPreco.val());
+        if (isNaN(p) || p < 0)
+            return false;
 
         return true;
     }
